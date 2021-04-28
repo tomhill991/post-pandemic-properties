@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  max_guests: 1
+  office_size: 1
+  latitude: 1.5
+  longitude: 1.5
+  user_id: one
+  title: MyString
+  description: MyString
+  string: MyString
+  average_rating: 1.5
+  has_beach_nearby: false
+  has_beds: false
+  has_kitchen: false
+  has_simming_pool: false
+  has_hdtv: false
+  has_bathtub: false
+
+two:
+  max_guests: 1
+  office_size: 1
+  latitude: 1.5
+  longitude: 1.5
+  user_id: two
+  title: MyString
+  description: MyString
+  string: MyString
+  average_rating: 1.5
+  has_beach_nearby: false
+  has_beds: false
+  has_kitchen: false
+  has_simming_pool: false
+  has_hdtv: false
+  has_bathtub: false
