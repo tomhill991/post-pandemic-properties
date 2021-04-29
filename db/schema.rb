@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_025027) do
+ActiveRecord::Schema.define(version: 2021_04_29_025945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,11 +21,9 @@ ActiveRecord::Schema.define(version: 2021_04_29_025027) do
     t.date "date_end"
     t.integer "no_of_guests"
     t.bigint "user_id", null: false
-    t.bigint "review_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["property_id"], name: "index_bookings_on_property_id"
-    t.index ["review_id"], name: "index_bookings_on_review_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -52,7 +50,7 @@ ActiveRecord::Schema.define(version: 2021_04_29_025027) do
     t.boolean "has_beach_nearby"
     t.boolean "has_beds"
     t.boolean "has_kitchen"
-    t.boolean "has_simming_pool"
+    t.boolean "has_swimming_pool"
     t.boolean "has_hdtv"
     t.boolean "has_bathtub"
     t.datetime "created_at", precision: 6, null: false
@@ -66,6 +64,8 @@ ActiveRecord::Schema.define(version: 2021_04_29_025027) do
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "booking_id"
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,6 +81,5 @@ ActiveRecord::Schema.define(version: 2021_04_29_025027) do
   end
 
   add_foreign_key "bookings", "properties"
-  add_foreign_key "bookings", "reviews"
   add_foreign_key "bookings", "users"
 end

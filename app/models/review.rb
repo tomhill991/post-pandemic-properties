@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-   has_one :bookings
+   belongs_to :bookiings
 end
