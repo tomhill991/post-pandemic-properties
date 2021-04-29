@@ -1,2 +1,3 @@
-class Booking < ApplicationRecord
+class Review < ApplicationRecord
+   has_one :bookings
 end
