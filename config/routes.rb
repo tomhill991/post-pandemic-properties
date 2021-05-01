@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "pages#home"
+  root to: 'pages#home'
   get 'properties', { to: 'properties#index' }
   get '/properties/:id', to: 'properties#show', as: 'properties_show'
   devise_for :users
