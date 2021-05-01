@@ -23,8 +23,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'rubocop'
-gem "js-routes"
+gem 'js-routes'
 gem 'validates_timeliness', '~> 6.0.0.alpha1'
+gem 'geocoder'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
