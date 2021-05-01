@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_124305) do
+ActiveRecord::Schema.define(version: 2021_05_01_073835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,12 +47,12 @@ ActiveRecord::Schema.define(version: 2021_04_29_124305) do
     t.string "description"
     t.string "string"
     t.float "average_rating"
-    t.boolean "has_beach_nearby"
-    t.boolean "has_beds"
-    t.boolean "has_kitchen"
-    t.boolean "has_swimming_pool"
-    t.boolean "has_hdtv"
-    t.boolean "has_bathtub"
+    t.boolean "has_beach_nearby", default: false, null: false
+    t.boolean "has_beds", default: false, null: false
+    t.boolean "has_kitchen", default: false, null: false
+    t.boolean "has_swimming_pool", default: false, null: false
+    t.boolean "has_hdtv", default: false, null: false
+    t.boolean "has_bathtub", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
