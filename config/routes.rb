@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users
   resources :properties do
-    resources :bookings, only: %i[index create edit destroy]
+    resources :bookings, only: %i[index create edit destroy] do
+      resources :reviews, only: %i[index create]
+    end
   end
 end
