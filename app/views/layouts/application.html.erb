@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= react_component("Header", {loginPath: new_user_session_path, logoutPath: destroy_user_session_path, signUpPath: new_user_registration_path, isUserLoggedIn: user_signed_in?, userProfilePath: user_profile_path(current_user)}, {prerender: false}) %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
