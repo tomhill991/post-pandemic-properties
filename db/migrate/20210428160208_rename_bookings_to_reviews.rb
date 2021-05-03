@@ -1,5 +1,5 @@
 class RenameBookingsToReviews < ActiveRecord::Migration[6.1]
   def change
-    rename_table :bookings, :reviews
+    # rename_table :reviews, :reviews
   end
 end

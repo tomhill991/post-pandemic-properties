@@ -106,12 +106,40 @@
 }
 
 body {
-    font-family: 'Lato';
+    font-family: 'Roboto';
     color: $darkFont;
 }
 
 header {
+    font-family: 'Lato';
     a {
+        color: $darkFont;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lato';
+}
+
+.property-card {
+    button {
+        span {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    .normal, .large {
+        font-weight: 400;
+    }
+
+    .normal {
+        font-size: 18px;
+        color: $lightGreyFont
+    }
+
+    .large {
+        font-size: 26px;
         color: $darkFont;
     }
 }

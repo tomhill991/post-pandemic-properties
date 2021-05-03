@@ -1,5 +1,7 @@
 $blue: #00257A;
 $darkFont: #343434;
+$lightGreyFont: #999999;
+$red: #D62839;
 
 @mixin backgroundImage($url, $size, $position) {
     display: block;

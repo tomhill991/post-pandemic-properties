@@ -1,7 +1,7 @@
 class Property < ApplicationRecord
-  belongs_to :users
-  has_many :reviews, through: :bookings, dependent: :destroy
-  has_many :images, { as: :imageable }, dependent: :destroy
+  belongs_to :user
+  has_many :reviews, through: :bookings
+  has_many_attached :images
   validates :max_guests, presence: true
   validates :office_size, presence: true
   validates :title, length: { maximum: 100 }, allow_blank: false, presence: true
